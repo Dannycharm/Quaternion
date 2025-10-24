@@ -1,0 +1,19 @@
+<?xml version="1.7" ?>
+<sdf version="1.9">
+  <model name="base_gps">
+    <pose>0 0 0 0 0 0</pose>
+    <link name="gps_link">
+      <sensor name="navsat_sensor" type="navsat">
+        <pose>0 0 0 0 0 0</pose>
+        <update_rate>5</update_rate>
+        <topic>navsat/fix</topic>
+        <navsat>
+          <position_sensing>true</position_sensing>
+          <velocity_sensing>true</velocity_sensing>
+        </navsat>
+      </sensor>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>
+

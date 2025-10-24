@@ -1,0 +1,18 @@
+<?xml version="1.7" ?>
+<sdf version="1.9">
+  <model name="base_imu">
+    <pose>0 0 0 0 0 0</pose>
+    <link name="imu_link">
+      <sensor name="imu_sensor" type="imu">
+        <pose>0 0 0 0 0 0</pose>
+        <update_rate>100</update_rate>
+        <topic>imu/data</topic>
+        <imu>
+          <orientation_reference_frame>ENU</orientation_reference_frame>
+        </imu>
+      </sensor>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>
+

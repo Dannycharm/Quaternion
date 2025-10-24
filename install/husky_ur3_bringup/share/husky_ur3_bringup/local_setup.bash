@@ -1,0 +1,1 @@
+/home/praise/mm_ws/build/husky_ur3_bringup/ament_cmake_environment_hooks/local_setup.bash

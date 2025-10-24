@@ -1,0 +1,31 @@
+<?xml version="1.7" ?>
+<sdf version="1.9">
+  <model name="front_laser">
+    <pose>0 0 0 0 0 0</pose>
+    <link name="front_laser_link">
+      <sensor name="front_laser" type="gpu_lidar">
+        <pose>0 0 0 0 0 0</pose>
+        <update_rate>20</update_rate>
+        <topic>scan</topic>
+        <lidar>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.5708</min_angle>
+            <max_angle>1.5708</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>1</samples>
+            <resolution>1</resolution>
+            <min_angle>0</min_angle>
+            <max_angle>0</max_angle>
+          </vertical>
+          <min_range>0.05</min_range>
+          <max_range>25.0</max_range>
+        </lidar>
+      </sensor>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>
+

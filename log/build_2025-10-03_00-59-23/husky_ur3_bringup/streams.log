@@ -1,0 +1,187 @@
+[0.011s] Invoking command in '/home/praise/mm_ws/build/husky_ur3_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/praise/mm_ws/src/husky_ur3_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/praise/mm_ws/install/husky_ur3_bringup
+[0.265s] -- The C compiler identification is GNU 13.3.0
+[0.439s] -- The CXX compiler identification is GNU 13.3.0
+[0.471s] -- Detecting C compiler ABI info
+[0.603s] -- Detecting C compiler ABI info - done
+[0.617s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.618s] -- Detecting C compile features
+[0.619s] -- Detecting C compile features - done
+[0.637s] -- Detecting CXX compiler ABI info
+[0.764s] -- Detecting CXX compiler ABI info - done
+[0.774s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.775s] -- Detecting CXX compile features
+[0.775s] -- Detecting CXX compile features - done
+[0.787s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.974s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.084s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.288s] -- Configuring done (1.2s)
+[1.292s] -- Generating done (0.0s)
+[1.294s] -- Build files have been written to: /home/praise/mm_ws/build/husky_ur3_bringup
+[1.300s] Invoked command in '/home/praise/mm_ws/build/husky_ur3_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/praise/mm_ws/src/husky_ur3_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/praise/mm_ws/install/husky_ur3_bringup
+[1.301s] Invoking command in '/home/praise/mm_ws/build/husky_ur3_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/praise/mm_ws/build/husky_ur3_bringup -- -j24 -l24
+[1.357s] Invoked command in '/home/praise/mm_ws/build/husky_ur3_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/praise/mm_ws/build/husky_ur3_bringup -- -j24 -l24
+[1.368s] Invoking command in '/home/praise/mm_ws/build/husky_ur3_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/praise/mm_ws/build/husky_ur3_bringup
+[1.377s] -- Install configuration: ""
+[1.378s] -- Execute custom install script
+[1.378s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/README.md
+[1.389s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/accessories/d435_camera_g.urdf.xacro
+[1.399s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/accessories/d435_camera_h.urdf.xacro
+[1.409s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/accessories/kinect_camera.urdf.xacro
+[1.423s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/accessories/sensor_arch.urdf.xacro
+[1.437s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/accessories/sick_tim571.urdf.xacro
+[1.447s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/common.gazebo.xacro
+[1.458s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/d435_camera.urdf.xacro
+[1.466s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/decorations.urdf.xacro
+[1.474s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/empty.urdf
+[1.485s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/husky.urdf.xacro
+[1.495s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/husky_ur3.urdf.xacro
+[1.503s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/husky_ur3_8DOF.urdf.xacro
+[1.515s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/husky_ur3_gripper.urdf.xacro
+[1.529s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/materials.xacro
+[1.539s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/realsense.xacro
+[1.552s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/rh_p12_rn.gazebo
+[1.562s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/rh_p12_rn.xacro
+[1.571s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/rh_p12_rn_gripper.xacro
+[1.582s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/ur.gazebo.xacro
+[1.590s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/ur.transmission.xacro
+[1.598s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/ur3.urdf.xacro
+[1.608s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/ur3_gripper.urdf.xacro
+[1.624s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/ur3_joint_limited_robot.urdf.xacro
+[1.635s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/ur3_robot.urdf.xacro
+[1.644s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/ur3_robot_gripper.urdf.xacro
+[1.653s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/wheel.urdf.xacro
+[1.664s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/UR_Contorl_Box.stl
+[1.674s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/300_mm_sensor_arch.dae
+[1.683s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/300_mm_sensor_arch.stl
+[1.692s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/510_mm_sensor_arch.dae
+[1.703s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/510_mm_sensor_arch.stl
+[1.715s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/d435.dae
+[1.731s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/d435_mount.stl
+[1.741s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/d435_mount_down.stl
+[1.751s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/kinect.dae
+[1.761s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/kinect.jpg
+[1.771s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/kinect.tga
+[1.780s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/lidar_mount.stl
+[1.788s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/lms1xx_mount.dae
+[1.799s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/accessories/lms1xx_mount.stl
+[1.808s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/base.stl
+[1.825s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/base_link.dae
+[1.836s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/base_link.stl
+[1.846s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/bumper.dae
+[1.856s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/bumper_extension.dae
+[1.865s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/d435_mount_down.stl
+[1.875s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/l1.stl
+[1.884s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/l2.stl
+[1.892s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/large_top_plate.dae
+[1.900s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/large_top_plate_collision.stl
+[1.909s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/r1.stl
+[1.923s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/r2.stl
+[1.934s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/sick_tim/sick_tim.stl
+[1.945s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/sick_tim/sick_tim551.stl
+[1.954s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/sick_tim/sick_tim571.dae
+[1.963s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/top_chassis.dae
+[1.973s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/top_chassis.stl
+[1.981s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/top_plate.dae
+[1.990s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/top_plate.stl
+[2.000s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/collision/base.stl
+[2.009s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/collision/forearm.stl
+[2.027s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/collision/shoulder.stl
+[2.039s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/collision/upperarm.stl
+[2.049s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/collision/wrist1.stl
+[2.059s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/collision/wrist2.stl
+[2.070s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/collision/wrist3.stl
+[2.078s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/visual/base.dae
+[2.089s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/visual/forearm.dae
+[2.098s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/visual/shoulder.dae
+[2.108s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/visual/upperarm.dae
+[2.122s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/visual/wrist1.dae
+[2.135s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/visual/wrist2.dae
+[2.147s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur10/visual/wrist3.dae
+[2.160s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/collision/base.stl
+[2.171s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/collision/forearm.stl
+[2.182s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/collision/shoulder.stl
+[2.190s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/collision/upperarm.stl
+[2.199s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/collision/wrist1.stl
+[2.210s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/collision/wrist2.stl
+[2.226s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/collision/wrist3.stl
+[2.238s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/visual/base.dae
+[2.247s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/visual/forearm.dae
+[2.257s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/visual/shoulder.dae
+[2.268s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/visual/upperarm.dae
+[2.278s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/visual/wrist1.dae
+[2.288s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/visual/wrist2.dae
+[2.296s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3/visual/wrist3.dae
+[2.307s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur3_box.stl
+[2.320s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/collision/base.stl
+[2.333s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/collision/forearm.stl
+[2.343s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/collision/shoulder.stl
+[2.353s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/collision/upperarm.stl
+[2.364s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/collision/wrist1.stl
+[2.374s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/collision/wrist2.stl
+[2.384s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/collision/wrist3.stl
+[2.393s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/visual/base.dae
+[2.403s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/visual/forearm.dae
+[2.414s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/visual/shoulder.dae
+[2.430s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/visual/upperarm.dae
+[2.440s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/visual/wrist1.dae
+[2.452s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/visual/wrist2.dae
+[2.461s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/ur5/visual/wrist3.dae
+[2.472s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/user_rail.dae
+[2.480s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/user_rail.stl
+[2.489s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/wheel.dae
+[2.499s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/meshes/wheel.stl
+[2.509s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/config/README.md
+[2.525s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/config/controllers.yaml
+[2.537s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/launch/README.md
+[2.546s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/launch/sim.launch.py
+[2.557s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/model.config
+[2.567s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/model.sdf
+[2.577s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/model_abbreviated.sdf
+[2.585s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_0.png
+[2.596s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_1.png
+[2.606s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_10.png
+[2.618s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_11.png
+[2.633s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_2.png
+[2.645s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_3.png
+[2.655s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_4.png
+[2.666s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_5.png
+[2.676s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_6.png
+[2.685s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_7.png
+[2.696s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_8.png
+[2.705s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/MarkerData_9.png
+[2.717s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/elevator.material
+[2.731s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/elevator.png
+[2.743s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/generate_codes_and_materials.py
+[2.756s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/inner_elv.material
+[2.767s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/inner_elv.png
+[2.775s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/make_montage.sh
+[2.786s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_0.material
+[2.795s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_1.material
+[2.806s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_10.material
+[2.818s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_11.material
+[2.832s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_2.material
+[2.844s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_3.material
+[2.853s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_4.material
+[2.863s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_5.material
+[2.872s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_6.material
+[2.880s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_7.material
+[2.891s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_8.material
+[2.899s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/bin/tags/product_9.material
+[2.910s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/product_0/model.config
+[2.924s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/resources/models/product_0/model.sdf
+[2.938s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/ament_index/resource_index/package_run_dependencies/husky_ur3_bringup
+[2.948s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/ament_index/resource_index/parent_prefix_path/husky_ur3_bringup
+[2.959s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/environment/ament_prefix_path.sh
+[2.968s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/environment/ament_prefix_path.dsv
+[2.977s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/environment/path.sh
+[2.987s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/environment/path.dsv
+[2.996s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/local_setup.bash
+[3.007s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/local_setup.sh
+[3.018s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/local_setup.zsh
+[3.034s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/local_setup.dsv
+[3.046s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/package.dsv
+[3.056s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/ament_index/resource_index/packages/husky_ur3_bringup
+[3.065s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/cmake/husky_ur3_bringupConfig.cmake
+[3.074s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/cmake/husky_ur3_bringupConfig-version.cmake
+[3.084s] -- Symlinking: /home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/package.xml
+[3.094s] Invoked command in '/home/praise/mm_ws/build/husky_ur3_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/praise/mm_ws/build/husky_ur3_bringup

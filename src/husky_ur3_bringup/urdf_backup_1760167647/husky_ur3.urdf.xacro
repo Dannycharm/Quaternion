@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<robot name="husky_ur3" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ============================= -->
+  <!-- BEGIN: user-editable settings -->
+  <!-- ============================= -->
+
+  <!-- Husky mount point: change to actual plate link in your base -->
+  <xacro:property name="husky_mount_parent" value="top_plate_link"/>
+
+  <!-- UR3 base link name from your UR3 xacro (often 'base_link' or 'ur_base_link') -->
+  <xacro:property name="ur3_base_link" value="base_link"/>
+
+  <!-- Fixed transform from Husky top plate to UR3 base (copy from ROS1 repo if available) -->
+  <xacro:property name="ur3_mount_xyz" value="0.0 0.0 0.15"/>  <!-- TODO: set real offsets -->
+  <xacro:property name="ur3_mount_rpy" value="0 0 0"/>        <!-- TODO: set real angles -->
+
+  <!-- Wheel joint names on your Husky base -->
+  <xacro:property name="left_wheel_joint"  value="left_wheel_joint"/>   <!-- TODO -->
+  <xacro:property name="right_wheel_joint" value="right_wheel_joint"/>  <!-- TODO -->
+
+  <!-- UR3 joint names (update to match your UR3 xacro exactly) -->
+  <xacro:property name="j_shoulder_pan"  value="shoulder_pan_joint"/>
+  <xacro:property name="j_shoulder_lift" value="shoulder_lift_joint"/>
+  <xacro:property name="j_elbow"         value="elbow_joint"/>
+  <xacro:property name="j_wrist_1"       value="wrist_1_joint"/>
+  <xacro:property name="j_wrist_2"       value="wrist_2_joint"/>
+  <xacro:property name="j_wrist_3"       value="wrist_3_joint"/>
+
+  <!-- Gripper single-DOF joint (if present) -->
+  <xacro:property name="j_gripper" value="gripper_finger_joint"/> <!-- TODO -->
+
+  <!-- ============================= -->
+  <!--  END: user-editable settings  -->
+  <!-- ============================= -->
+
+  <!-- (A) INCLUDE your base + arm geometry/macros
+       Option 1: include files you copied into this package:
+         <xacro:include filename="/home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/husky_base.xacro"/>
+         <xacro:include filename="/home/praise/mm_ws/install/husky_ur3_bringup/share/husky_ur3_bringup/urdf/ur3.xacro"/>
+       Option 2: include official ROS 2 description packages (if installed):
+         <xacro:include filename="$(find-pkg-share husky_description)/urdf/husky.urdf.xacro"/>
+         <xacro:include filename="$(find-pkg-share ur_description)/urdf/ur_macro.xacro"/>
+       Make sure those files resolve; otherwise paste your full geometry here. -->
+
+  <!-- Example placeholders: if your copied xacros expose macros, instantiate them -->
+  <!-- Replace these with your actual macros or base/arm definitions -->
+  <!-- Example (commented): -->
+  <!-- <xacro:husky_base name="husky"/> -->
+  <!-- <xacro:ur_robot name="ur3" ur_type="ur3" prefix="" use_fake_hardware="true"/> -->
+
+  <!-- (B) MOUNT UR3 ONTO HUSKY -->
+  <joint name="ur3_mount_joint" type="fixed">
+    <origin xyz="${ur3_mount_xyz}" rpy="${ur3_mount_rpy}"/>
+    <parent link="${husky_mount_parent}"/>
+    <child  link="${ur3_base_link}"/>
+  </joint>
+
+  <!-- (C) ros2_control for Gazebo Sim (gz_ros2_control) -->
+  <ros2_control name="gz_system" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+
+    <!-- Base wheels: 4 wheel joints (two per side) -->
+    <joint name="front_left_wheel">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="rear_left_wheel">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="front_right_wheel">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="rear_right_wheel">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+
+    <!-- UR3 6 joints (position control for JTC) -->
+    <joint name="shoulder_pan_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="shoulder_lift_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="elbow_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="wrist_1_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="wrist_2_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="wrist_3_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- Gripper: 4 position joints -->
+    <joint name="rh_p12_rn">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="rh_r2">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="rh_l1">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="rh_l2">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+
+  <!-- NOTE:
+       Classic <gazebo><plugin ...> blocks from ROS1 are intentionally REMOVED.
+       Sensors will be added via Gazebo Sim SDF models (see resources/models). -->
+
+</robot>
+
