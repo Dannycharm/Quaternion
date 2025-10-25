@@ -1,1 +1,0 @@
-/home/praise/mm_ws/src/husky_ur3_bringup/resources/models/bin/tags/make_montage.sh

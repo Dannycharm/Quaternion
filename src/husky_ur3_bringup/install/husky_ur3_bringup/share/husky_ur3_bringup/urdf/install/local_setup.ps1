@@ -1,1 +1,0 @@
-/home/praise/mm_ws/src/husky_ur3_bringup/urdf/install/local_setup.ps1
