@@ -9,3 +9,7 @@ __pycache__/
 
 # Colcon intermediate
 .colcon/
+
+src/*/build/
+src/*/install/
+src/*/log/
