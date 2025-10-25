@@ -1,0 +1,11 @@
+build/
+install/
+log/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Colcon intermediate
+.colcon/
