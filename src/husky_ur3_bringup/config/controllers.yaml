@@ -1,60 +1,139 @@
+# File: controllers.yaml
+
+# ------------- Controller Manager -------------
 controller_manager:
   ros__parameters:
     update_rate: 100
 
+    # Only declare the controller types here.
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-    # Base (diff drive) — matches your ROS1 control.yaml wheel lists
     base_controller:
       type: diff_drive_controller/DiffDriveController
-      left_wheel_names:  ["front_left_wheel", "rear_left_wheel"]
-      right_wheel_names: ["front_right_wheel", "rear_right_wheel"]
 
-      # Timing & TF
-      publish_rate: 50
-      cmd_vel_timeout: 0.25
-      enable_odom_tf: false   # in ROS1 you used robot_localization for fused odom
-
-      # Optional: match your ROS1 covariances (not required for Part-1)
-      # pose_covariance_diagonal:  [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
-      # twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
-
-      # Optional limits (can be added later)
-      # linear.x.has_velocity_limits: true
-      # linear.x.max_velocity: 1.0
-      # linear.x.has_acceleration_limits: true
-      # linear.x.max_acceleration: 3.0
-      # angular.z.has_velocity_limits: true
-      # angular.z.max_velocity: 2.0
-      # angular.z.has_acceleration_limits: true
-      # angular.z.max_acceleration: 6.0
-
-    # UR3 arm — 6 joints, position-controlled trajectory
     arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
-      joints:
-        - shoulder_pan_joint
-        - shoulder_lift_joint
-        - elbow_joint
-        - wrist_1_joint
-        - wrist_2_joint
-        - wrist_3_joint
-      command_interfaces: ["position"]
-      state_interfaces: ["position", "velocity"]
-      # optional comfy settings
-      # allow_partial_joints_goal: false
-      # open_loop_control: true
 
-    # Gripper — your ROS1 setup had FOUR joints with separate position controllers.
-    # In ROS2, a simple way is a JointGroupPositionController for those four joints.
     gripper_controller:
       type: position_controllers/JointGroupPositionController
-      joints:
-        - rh_p12_rn
-        - rh_r2
-        - rh_l1
-        - rh_l2
-      # You will command it by publishing Float64MultiArray to:
-      #   /gripper_controller/commands
+
+
+# ------------- Each controller's parameters -------------
+# IMPORTANT: these blocks MUST be top-level and match the controller names.
+
+joint_state_broadcaster:
+  ros__parameters: {}   # publish all state interfaces
+
+base_controller:
+  ros__parameters:
+    left_wheel_names:  ["front_left_wheel", "rear_left_wheel"]
+    right_wheel_names: ["front_right_wheel", "rear_right_wheel"]
+
+    # Required wheel geometry (non‑zero)
+    wheel_separation: 0.55          # meters (distance between left and right wheel pairs)
+    wheel_radius: 0.165             # meters (radius of each wheel)
+    wheel_separation_multiplier: 1.0
+    wheel_radius_multiplier: 1.0
+
+    # Timing & TF
+    publish_rate: 50.0              # must be double
+    cmd_vel_timeout: 0.25           # seconds before stop
+    use_stamped_vel: false
+    base_frame_id: base_link
+    odom_frame_id: odom
+    enable_odom_tf: true
+    publish_limited_velocity: true
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+    command_interfaces: ["position"]
+    state_interfaces: ["position", "velocity"]
+    # allow_partial_joints_goal: false
+    # open_loop_control: true
+
+gripper_controller:
+  ros__parameters:
+    joints:
+      - rh_p12_rn
+      - rh_r2
+      - rh_l1
+      - rh_l2
+    # You will publish Float64MultiArray to /gripper_controller/commands
+
+
+
+
+
+
+
+
+
+
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 100
+
+#     joint_state_broadcaster:
+#       type: joint_state_broadcaster/JointStateBroadcaster
+
+#     # Base (diff drive) — matches your ROS1 control.yaml wheel lists
+#     base_controller:
+#       type: diff_drive_controller/DiffDriveController
+#       left_wheel_names:  ["front_left_wheel", "rear_left_wheel"]
+#       right_wheel_names: ["front_right_wheel", "rear_right_wheel"]
+
+#       # Timing & TF
+#       publish_rate: 50
+#       cmd_vel_timeout: 0.25
+#       enable_odom_tf: false   # in ROS1 you used robot_localization for fused odom
+
+#       # Optional: match your ROS1 covariances (not required for Part-1)
+#       # pose_covariance_diagonal:  [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
+#       # twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
+
+#       # Optional limits (can be added later)
+#       # linear.x.has_velocity_limits: true
+#       # linear.x.max_velocity: 1.0
+#       # linear.x.has_acceleration_limits: true
+#       # linear.x.max_acceleration: 3.0
+#       # angular.z.has_velocity_limits: true
+#       # angular.z.max_velocity: 2.0
+#       # angular.z.has_acceleration_limits: true
+#       # angular.z.max_acceleration: 6.0
+
+#     # UR3 arm — 6 joints, position-controlled trajectory
+#     arm_controller:
+#       type: joint_trajectory_controller/JointTrajectoryController
+#       joints:
+#         - shoulder_pan_joint
+#         - shoulder_lift_joint
+#         - elbow_joint
+#         - wrist_1_joint
+#         - wrist_2_joint
+#         - wrist_3_joint
+#       command_interfaces: ["position"]
+#       state_interfaces: ["position", "velocity"]
+#       # optional comfy settings
+#       # allow_partial_joints_goal: false
+#       # open_loop_control: true
+
+#     # Gripper — your ROS1 setup had FOUR joints with separate position controllers.
+#     # In ROS2, a simple way is a JointGroupPositionController for those four joints.
+#     gripper_controller:
+#       type: position_controllers/JointGroupPositionController
+#       joints:
+#         - rh_p12_rn
+#         - rh_r2
+#         - rh_l1
+#         - rh_l2
+#       # You will command it by publishing Float64MultiArray to:
+#       #   /gripper_controller/commands
 

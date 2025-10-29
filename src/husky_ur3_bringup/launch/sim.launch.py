@@ -38,6 +38,26 @@ def generate_launch_description():
                '/home/praise/mm_ws/install/husky_ur3_bringup/share']
     )
 
+
+   # --- ADD CLOCK BRIDGE HERE (It must come before spawners) ---
+    # clock_bridge = Node(
+    #     package='ros_gz_bridge',
+    #     executable='parameter_bridge',
+    #     arguments=['/world/empty/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock'],
+    #     output='screen'
+    # )
+    # delayed start, connects reliably
+    clock_bridge = TimerAction(
+    period=3.0,
+    actions=[Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=['/world/empty/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock'],
+        output='screen'
+    )]
+)
+    # -------------------------------------------------------------
+    
     # Start Gazebo Sim
     gz = ExecuteProcess(
         cmd=['gz', 'sim', '-r', '-v', '3', 'empty.sdf'],
@@ -96,10 +116,12 @@ def generate_launch_description():
     delayed_spawners = TimerAction(period=6.0, actions=[jsb, base, arm, grip])
 
     # Return the complete launch description
+     # Final launch order: env → RSP → clock → Gazebo → spawn → spawners
     return LaunchDescription([
         set_gz_plugin_path,
         set_gz_resource_path,
         rsp,
+        clock_bridge,
         gz,
         spawn,
         delayed_spawners
