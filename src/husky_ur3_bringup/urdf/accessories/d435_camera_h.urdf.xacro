@@ -37,7 +37,7 @@
 
     <!-- Gazebo Sim native depth camera (RGB‑D replacement) -->
     <gazebo reference="${name}_link">
-      <sensor name="${name}_depth_camera" type="depth_camera">
+      <sensor name="${name}_depth_camera" type="rgbd_camera">
         <always_on>true</always_on>
         <update_rate>20.0</update_rate>
         <visualize>true</visualize>
