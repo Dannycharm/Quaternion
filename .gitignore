@@ -1,0 +1,29 @@
+build/
+install/
+log/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Colcon intermediate
+.colcon/
+
+src/*/build/
+src/*/install/
+src/*/log/
+
+# Model
+*.pth
+
+# other
+husky_ur3_2025-11-07_024933/
+must3r_env/
+husky_ur3_2025-11-07_024933/
+src/GazeboMarsRover2/
+src/gazebo_ros_demos/
+src/husky_ur3_bringup/urdf/accessories/test_g_camera.xacro
+video recordings/
+/maps
+
